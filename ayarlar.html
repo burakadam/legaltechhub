@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal Tech</title>
+    <link rel="stylesheet" href="assets/inc/fonts/webfonts/all.css" />
+    <link rel="stylesheet" href="assets/inc/styles.css" />
+  </head>
+  <body onload="init()">
+    <div id="container" class="safe">
+      <div id="menu" class="mobile-popup">
+        <button type="button" class="close-btn" id="menu__close">
+          <i class="fal fa-times"></i>
+        </button>
+        <div class="mobile-popup__container">
+          <nav class="mobile-popup__content">
+            <a href="/main.html" class="active">
+              <i class="fal fa-home"></i>
+              <span>Ana Sayfa</span>
+            </a>
+            <a href="/yazismalar.html">
+              <i class="fal fa-file-alt"></i>
+              <span>Yazışmalar</span>
+            </a>
+            <a href="/bildirimler.html">
+              <i class="fal fa-bell"></i>
+              <span>Bildirimler</span>
+            </a>
+            <a href="/sablonlar.html">
+              <i class="fal fa-file-invoice"></i>
+              <span>Şablonlar</span>
+            </a>
+            <a href="/raporlar.html">
+              <i class="fal fa-chart-bar"></i>
+              <span>Raporlar</span>
+            </a>
+            <a href="/ayarlar.html">
+              <i class="fal fa-cog"></i>
+              <span>Ayarlar</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div id="side">
+        <header>
+          <a href="/main.html" id="header__home">
+            <img src="assets/images/logo.svg" alt="Legal Tech" />
+          </a>
+          <div id="header__content">
+            <div id="header___buttons">
+              <button
+                type="button"
+                class="btn border sm header__container-btn"
+                id="header__search-btn"
+                data-id="header__search-box"
+              >
+                Search
+                <i class="fal fa-search"></i>
+              </button>
+              <button
+                type="button"
+                class="btn border sm header__container-btn"
+                id="header__upload-btn"
+                data-id="header__upload-box"
+              >
+                Upload
+                <i class="fal fa-upload"></i>
+              </button>
+            </div>
+            <div class="header__item">
+              <select name="language" id="header__select-language" class="sm">
+                <option value="en">EN</option>
+                <option value="tr">TR</option>
+              </select>
+            </div>
+            <button
+              type="button"
+              class="header__item header__container-btn"
+              id="header__notification-bell"
+              data-id="header__notification-box"
+            >
+              <span>2</span>
+              <i class="fal fa-bell"></i>
+            </button>
+            <div class="header__item" id="header__user-tag">
+              <i class="fal fa-user"></i>
+              <p>Zeynep Vural</p>
+            </div>
+            <button type="button" id="header__menu-btn">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+          <div id="header__search-box" class="blue-container mobile-popup">
+            <button
+              type="button"
+              class="close-btn"
+              id="header__search-box__close"
+            >
+              <i class="fal fa-times"></i>
+            </button>
+            <div class="mobile-popup__container">
+              <div class="mobile-popup__content">
+                <div class="input-box sm w31">
+                  <select name="search-parameters">
+                    <option value="0" selected>Search Parameter</option>
+                    <option value="1">Param 1</option>
+                    <option value="2">Param 2</option>
+                  </select>
+                </div>
+                <div class="input-box sm w29">
+                  <select name="search-parameters ">
+                    <option value="0" selected>Request Type</option>
+                    <option value="1">Type 1</option>
+                    <option value="2">Type 2</option>
+                  </select>
+                </div>
+                <div class="input-box sm w31">
+                  <select name="search-parameters">
+                    <option value="0" selected>Status</option>
+                    <option value="1">Status 1</option>
+                    <option value="2">Status 2</option>
+                  </select>
+                </div>
+                <div class="input-box sm w62">
+                  <input type="text" name="search" placeholder="Search" />
+                </div>
+                <button type="button" class="btn">Search</button>
+                <button type="button" class="btn">Clear</button>
+              </div>
+            </div>
+          </div>
+          <div id="header__upload-box" class="blue-container mobile-popup">
+            <button
+              type="button"
+              class="close-btn"
+              id="header__upload-box__close"
+            >
+              <i class="fal fa-times"></i>
+            </button>
+            <div class="mobile-popup__container">
+              <div class="mobile-popup__content">
+                <div class="input-box sm w-62 file-input">
+                  <div class="file-inpute__fake-container">
+                    <p></p>
+                    <div>
+                      <span>...</span>
+                    </div>
+                    <i class="fal fa-folder"></i>
+                  </div>
+                  <input type="file" name="file upload" />
+                </div>
+
+                <button type="button" class="btn">Send</button>
+                <button type="button" class="btn">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <div
+            id="header__notification-box"
+            class="blue-container mobile-popup"
+          >
+            <button
+              type="button"
+              class="close-btn"
+              id="header__upload-box__close"
+            >
+              <i class="fal fa-times"></i>
+            </button>
+            <div class="mobile-popup__container">
+              <div class="mobile-popup__content">
+                <table class="color">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i class="fas fa-check"></i>
+                      </td>
+                      <td>
+                        <p>Document Approved</p>
+                      </td>
+                      <td>16:50</td>
+                      <td>17.05.2021</td>
+                      <td>
+                        <p>System No: <span>#348</span></p>
+                      </td>
+                      <td></td>
+                      <td>
+                        <button type="button">İncele</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="fas fa-times"></i>
+                      </td>
+                      <td>
+                        <p>Document Rejected</p>
+                      </td>
+                      <td>18:50</td>
+                      <td>17.05.2021</td>
+                      <td>
+                        <p>System No: <span>#398</span></p>
+                      </td>
+                      <td>Request type yanlış girilmiş.</td>
+                      <td>
+                        <button type="button">İncele</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div id="content">
+          <section>
+            <div class="section__header">
+                <h3>Reports</p>
+              </div>
+            <div class="shadow-box side__section">
+                <div class="form-box full ">
+                    <div class="input-box blue">
+                        <select>
+                          <option value="en">Company Information</option>
+                          <option value="tr">Information</option>
+                        </select>
+                      </div>
+                      <div class="input-box ">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="xxxx">
+                      </div>
+                      <div class="input-box ">
+                        <label>Company Phone Number</label>
+                        <input type="text" placeholder="xxxx">
+                      </div>
+                      <div class="input-box ">
+                        <label>Company Location</label>
+                        <input type="text" placeholder="xxxx">
+                      </div>
+                      <div class="input-box blue">
+                        <select>
+                          <option value="en">User Authorization</option>
+                          <option value="tr">Authorization</option>
+                        </select>
+                      </div>
+                  </div>
+            </div>
+            <div class="spread-box right">
+                <div>
+                    <button type="button" class="btn">Cancel</button>
+                    <button type="button" class="btn">Save</button>
+                </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div id="overlay">
+      <div id="overlay__container" class="center">
+        <div class="shadow-box column full">
+          <button type="button" class="close-btn">
+            <i class="fal fa-times"></i>
+          </button>
+          <div class="form-box full">
+            <div class="input-box">
+              <select>
+                <option value="1">Reject Type</option>
+                <option value="2">Type</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <select>
+                <option value="1">Who do yu want to reject?</option>
+                <option value="2">Why</option>
+              </select>
+            </div>
+            <div class="input-box lg">
+              <label>Notes</label>
+              <textarea></textarea>
+            </div>
+            <div class="spread-box right">
+              <div>
+                <button type="button" class="btn text">Clear</button>
+                <button type="button" class="btn" id="login">Reject</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/inc/events.js"></script>
+    <script src="assets/inc/functions.js"></script>
+  </body>
+</html>
