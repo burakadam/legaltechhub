@@ -1,26 +1,26 @@
 /* COMMON */
 
 @font-face {
-  font-family: "Avenir-Medium";
-  src: url("fonts/Avenir-Medium.woff") format("woff");
+  font-family: 'Avenir-Medium';
+  src: url('fonts/Avenir-Medium.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Avenir-Roman";
-  src: url("fonts/Avenir-Roman.woff2") format("woff2"),
-    url("fonts/Avenir-Roman.woff") format("woff");
+  font-family: 'Avenir-Roman';
+  src: url('fonts/Avenir-Roman.woff2') format('woff2'),
+    url('fonts/Avenir-Roman.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Avenir-Heavy";
-  src: url("fonts/Avenir-Heavy.woff2") format("woff2"),
-    url("fonts/Avenir-Heavy.woff") format("woff");
+  font-family: 'Avenir-Heavy';
+  src: url('fonts/Avenir-Heavy.woff2') format('woff2'),
+    url('fonts/Avenir-Heavy.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Avenir-Black";
-  src: url("fonts/Avenir-Black.woff2") format("woff2"),
-    url("fonts/Avenir-Black.woff") format("woff");
+  font-family: 'Avenir-Black';
+  src: url('fonts/Avenir-Black.woff2') format('woff2'),
+    url('fonts/Avenir-Black.woff') format('woff');
 }
 
 * {
@@ -34,7 +34,7 @@
   -webkit-font-smoothing: antialised;
   -webkit-font-smoothing: subpixel-antialiased;
   letter-spacing: 0;
-  font-family: "Avenir-Roman", Helvetica, sans-serif;
+  font-family: 'Avenir-Roman', Helvetica, sans-serif;
   color: #000;
 }
 
@@ -135,7 +135,7 @@ button {
 }
 
 .spread-box p {
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
   font-size: 13px;
 }
 
@@ -159,7 +159,7 @@ button {
 }
 
 .section__header h3 {
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
 }
 
 .column {
@@ -300,7 +300,7 @@ button {
 .btn.text {
   background-color: transparent;
   color: #3e4a5a;
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
 }
 
 .btn.right {
@@ -315,7 +315,7 @@ button {
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
 }
 
 .btn.tar {
@@ -351,15 +351,15 @@ button {
 }
 
 .show-hide-btn span {
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
 }
 
 .show-hide-btn:before {
-  content: "Show ";
+  content: 'Show ';
 }
 
 .document-box.opened .show-hide-btn:before {
-  content: "Hide ";
+  content: 'Hide ';
 }
 
 .close-btn {
@@ -431,7 +431,7 @@ nav a.active {
 
 nav a span {
   display: none;
-  font-family: "Avenir-Medium";
+  font-family: 'Avenir-Medium';
   font-size: 19px;
   color: #3e4a5a;
 }
@@ -528,7 +528,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
-  background-image: url("../images/arrow-down.svg");
+  background-image: url('../images/arrow-down.svg');
   background-repeat: no-repeat;
   background-size: 11px auto;
   background-position: right center;
@@ -548,6 +548,11 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+#header__menu-logo {
+  display: flex;
+  align-items: center;
 }
 
 #header__home {
@@ -592,7 +597,7 @@ header i {
   background-color: #0072ff;
   position: absolute;
   font-size: 10px;
-  font-family: "Avenir-Black";
+  font-family: 'Avenir-Black';
   color: #fff;
   left: 27px;
   top: -5px;
@@ -608,11 +613,43 @@ header i {
 
 #header__user-tag p {
   margin-left: 13px;
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
 }
 
 #header__menu-btn {
-  display: none;
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-right: 10px;
+}
+
+#header__menu-btn span:first-child {
+  transform: translate3d(0, -5px, 0);
+}
+
+#header__menu-btn span:last-child {
+  transform: translate3d(0, 5px, 0);
+}
+
+#header__menu-btn span {
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: #3e4a5a;
+  transform-origin: left;
+  transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+#header__menu-btn span:first-child {
+  transform: translate3d(0, -7px, 0);
+}
+#header__menu-btn span:last-child {
+  transform: translate3d(0, 7px, 0);
 }
 
 .blue-container {
@@ -646,7 +683,7 @@ header i {
 }
 
 #header__select-language {
-  font-family: "Avenir-Black";
+  font-family: 'Avenir-Black';
 }
 
 @media screen and (max-width: 1024px) {
@@ -679,6 +716,32 @@ header i {
     border: 1px solid #0072ff;
     color: #0072ff;
   }
+
+  #menu {
+    max-width: 0;
+    width: 96px;
+    overflow: hidden;
+    padding-right: 0;
+    transition: max-width 200ms ease-in-out;
+  }
+
+  #menu.active {
+    max-width: 96px;
+  }
+
+  .mobile-popup__content {
+    padding-right: 40px;
+  }
+
+  body.menu-opened #header__menu-btn span:first-child {
+    transform: translate3d(0, -7px, 0) rotate(45deg);
+  }
+  body.menu-opened #header__menu-btn span:last-child {
+    transform: translate3d(0, 7px, 0) rotate(-45deg);
+  }
+  body.menu-opened #header__menu-btn span:nth-of-type(2) {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -699,35 +762,6 @@ header i {
 
   #header___buttons > .btn:first-of-type {
     margin-left: 0;
-  }
-
-  #header__menu-btn {
-    display: block;
-    width: 30px;
-    height: 30px;
-    position: relative;
-  }
-
-  #header__menu-btn span {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 18px;
-    height: 2px;
-    background-color: #3e4a5a;
-    transition: transform 250ms ease-in-out, opacity 350ms ease-in-out;
-  }
-
-  #header__menu-btn span:first-child {
-    transform: translate3d(0, -5px, 0);
-  }
-
-  #header__menu-btn span:last-child {
-    transform: translate3d(0, 5px, 0);
   }
 
   #header__home {
@@ -919,7 +953,7 @@ header i {
   height: 16px;
   line-height: 16px;
   color: #fff;
-  font-family: "Avenir-Black";
+  font-family: 'Avenir-Black';
   font-size: 18px;
   background-color: #003462;
   border-radius: 4px;
@@ -959,7 +993,7 @@ header i {
 
 .tab {
   height: 35px;
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
   font-size: 15px;
   padding: 0 1em;
   margin-right: 15px;
@@ -972,7 +1006,7 @@ a.tab {
 }
 
 .tab::after {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 3px;
@@ -1073,7 +1107,7 @@ a.tab {
 /* TABLE */
 
 .table-box::after {
-  content: "";
+  content: '';
   clear: both;
   display: block;
 }
@@ -1087,7 +1121,7 @@ table {
 
 th {
   text-align: left;
-  font-family: "Avenir-Black";
+  font-family: 'Avenir-Black';
 }
 
 th,
@@ -1119,7 +1153,7 @@ table .fa-arrow-up {
 
 table button,
 table a {
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
   font-size: 12px;
   color: #000;
 }
@@ -1139,11 +1173,11 @@ table.color tr {
 }
 
 table.color td p {
-  font-family: "Avenir-heavy";
+  font-family: 'Avenir-heavy';
 }
 
 table.color td span {
-  font-family: "Avenir-Roman";
+  font-family: 'Avenir-Roman';
 }
 
 table.color .fa-check {
@@ -1214,7 +1248,7 @@ table td:last-child {
 
 .charts p {
   font-size: 12px;
-  font-family: "Avenir-Black";
+  font-family: 'Avenir-Black';
   margin-bottom: 4px;
 }
 
@@ -1306,7 +1340,7 @@ table td:last-child {
 .petition h3,
 .petition h4,
 .petition strong {
-  font-family: "Avenir-Heavy";
+  font-family: 'Avenir-Heavy';
 }
 
 .petition__image {
